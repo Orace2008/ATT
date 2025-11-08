@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orace M. ATTINMAWASSONOU — Agence Digitale</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red: #e3342f;            /* primaire */
+      --white: #ffffff;         /* fond / blanc */
+      --ink:  #0f1724;          /* bleu foncé / charcoal */
+      --muted: #6b7280;         /* gris pour textes secondaires */
+      --glass: rgba(255,255,255,0.06);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #fff 0%, #fff 60%, #f8fafc 100%);
+      color:var(--ink);
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Utility */
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+    .row{display:flex; gap:24px; align-items:center; flex-wrap:wrap;}
+    .btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--red);color:var(--white);box-shadow:0 8px 30px rgba(227,52,47,0.12);border:0;}
+    .btn-ghost{background:transparent;border:1px solid rgba(15,23,36,0.06);color:var(--ink)}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:60;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.80));
+      border-bottom: 1px solid rgba(15,23,36,0.04);
+      box-shadow: 0 2px 8px rgba(12,17,23,0.03);
+    }
+    .nav{height:72px; display:flex; align-items:center; justify-content:space-between;}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:52px;height:52px;border-radius:12px;
+      display:flex;align-items: center;justify-content:center;color:var(--white);
+      background: linear-gradient(135deg,var(--red), #ff6b6b); font-weight:700;
+      box-shadow:0 6px 20px rgba(227,52,47,0.18);
+      font-size:16px;
+    }
+    .brand h1{font-size:16px;margin:0;line-height:1}
+    .brand p{font-size:12px;color:var(--muted);margin:0}
+
+    nav.desktop{display:flex; gap:18px; align-items:center; font-weight:600}
+    nav.desktop a{color:var(--ink); text-decoration:none; padding:8px 10px; border-radius:10px}
+    nav.desktop a:hover{background:var(--glass)}
+
+    /* Hero */
+    .hero{
+      padding:88px 0 40px;
+      background:
+        radial-gradient(600px 200px at 10% 10%, rgba(227,52,47,0.06), transparent 10%),
+        radial-gradient(500px 180px at 95% 90%, rgba(15,23,36,0.03), transparent 10%);
+    }
+    .hero-grid{display:grid; grid-template-columns: 1fr 420px; gap:40px; align-items:center;}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background: rgba(227,52,47,0.08); color:var(--red); font-weight:600; font-size:13px}
+    .hero h2{font-size:36px;color:var(--ink); margin:18px 0 12px; line-height:1.05}
+    .hero p.lead{color:var(--muted); font-size:16px; max-width:640px}
+
+    .card-visual{
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.96));
+      border-radius:20px; padding:22px; box-shadow: 0 18px 40px rgba(15,23,36,0.06);
+      border:1px solid rgba(15,23,36,0.03);
+    }
+    .mockup{
+      width:100%; height:260px; border-radius:12px; overflow:hidden; display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(180deg, #fff, #f7fafc);
+    }
+    .mockup img{max-width:100%; height:auto; transform:translateY(-4px);}
+
+    /* Services section */
+    section{padding:72px 0}
+    .section-title{font-size:24px;color:var(--ink); font-weight:700; text-align:center; margin-bottom:18px}
+    .section-sub{color:var(--muted); text-align:center; margin-bottom:32px; max-width:780px; margin-left:auto; margin-right:auto}
+
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:20px;
+      margin-top:26px;
+    }
+    .service{
+      background: linear-gradient(180deg, #fff, #fff);
+      border-radius:var(--radius); padding:20px; min-height:260px;
+      box-shadow: 0 12px 30px rgba(12,17,23,0.05); border:1px solid rgba(15,23,36,0.03);
+      transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s;
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .service:hover{ transform: translateY(-10px); box-shadow: 0 26px 60px rgba(12,17,23,0.08); }
+    .service h4{margin:0;color:var(--red); font-size:18px}
+    .service p{color:var(--muted); margin-top:4px; flex:1}
+    .service ul{color:var(--ink); margin:12px 0 0 18px}
+    .kpi{display:flex; gap:12px; margin-top:16px}
+    .kpi .item{background:rgba(15,23,36,0.04); padding:10px 12px; border-radius:10px; font-size:13px}
+
+    /* Testimonials */
+    .testimonials{margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .testi{background:linear-gradient(180deg,#fff,#fff); border-radius:12px; padding:18px; box-shadow:0 12px 30px rgba(12,17,23,0.05)}
+    .stars{color: #f59e0b; margin-bottom:8px}
+    .quote{color:var(--muted); font-size:14px; margin-bottom:10px}
+    .author{display:flex; gap:12px; align-items:center}
+    .avatar{width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,var(--red), #ff7b7b); display:flex; align-items:center; justify-content:center; color:white; font-weight:700}
+
+    /* Contact CTA */
+    .cta{
+      margin-top:34px;
+      display:flex; align-items:center; justify-content:space-between; gap:20px;
+      background: linear-gradient(90deg, rgba(227,52,47,0.06), rgba(15,23,36,0.02));
+      padding:20px; border-radius:12px;
+    }
+
+    /* Footer */
+    footer{padding:28px 0; border-top:1px solid rgba(15,23,36,0.04); margin-top:40px; color:var(--muted); font-size:14px; text-align:center}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr 360px}
+      .services-grid{grid-template-columns: repeat(2,1fr)}
+      .testimonials{grid-template-columns: repeat(2,1fr)}
+    }
+    @media (max-width: 720px){
+      .nav .desktop{display:none}
+      .hero-grid{grid-template-columns:1fr; text-align:center}
+      .card-visual{order: -1}
+      .services-grid{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .cta{flex-direction:column; align-items:flex-start}
+    }
+
+    /* Scroll reveal helpers */
+    .reveal{opacity:0; transform: translateY(18px); transition: all 700ms cubic-bezier(.2,.9,.3,1)}
+    .reveal.revealed{opacity:1; transform: translateY(0)}
+    .reveal-left{opacity:0; transform: translateX(-24px); transition: all 700ms cubic-bezier(.2,.9,.3,1)}
+    .reveal-left.revealed{opacity:1; transform: translateX(0)}
+    .reveal-right{opacity:0; transform: translateX(24px); transition: all 700ms cubic-bezier(.2,.9,.3,1)}
+    .reveal-right.revealed{opacity:1; transform: translateX(0)}
+
+    /* small UI niceties */
+    .muted{color:var(--muted); font-size:13px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(227,52,47,0.08); color:var(--red); font-weight:600; font-size:13px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MOA</div>
+        <div>
+          <h1>Orace Attinmawassonou</h1>
+          <p>Développeur web</p>
+        </div>
+      </div>
+
+      <div class="desktop">
+        <nav class="desktop">
+          <a href="#services">Services</a>
+          <a href="#testimonials">Témoignages</a>
+          <a href="#contact">Contacts</a>
+          <a class="btn btn-primary" href="#contact">Demander un devis</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal-left">Agence digitale sérieuse</span>
+          <h2 class="reveal">Création de sites web : design professionnel, performance technique, stratégie digitale et visibilité en ligne</h2>
+          <p class="lead reveal" style="transition-delay:120ms">
+                  Nous sommes spécialisés dans la création de sites web professionnels, le développement sur mesure et l’optimisation de la visibilité en ligne.
+              Nous accompagnons les entreprises, entrepreneurs et organisations dans leur transformation numérique, en leur offrant des solutions modernes, performantes 
+              et adaptées à leurs besoins réels. Notre approche repose sur trois piliers essentiels :</p>
+             <p>-Design & Expérience utilisateur : des interfaces esthétiques, intuitives et centrées sur la conversion.</p>
+             <p>-Technologie & Performance : des sites rapides, sécurisés et conçus pour durer.</p>
+             <p>-Stratégie & Croissance : un accompagnement complet pour booster la visibilité et la crédibilité de chaque marque.</p>
+             <p>Nous croyons que chaque projet web doit être une vitrine de confiance et d’impact.
+              Notre mission est simple : faire du digital un moteur de croissance durable pour nos clients, grâce à des solutions claires, transparentes et hautement professionnelles.</p>
+
+          <div class="row" style="margin-top:20px">
+            <a class="btn btn-primary reveal" href="#contact" style="transition-delay:200ms">Demander un devis</a>
+            <a class="btn btn-ghost reveal" href="#services" style="transition-delay:260ms">Découvrir nos services</a>
+          </div>
+
+          <div class="reveal" style="margin-top:22px; transition-delay:320ms">
+            <small class="muted">Depuis la stratégie jusqu’au support technique, nous sommes votre partenaire web.</small>
+          </div>
+
+          <div class="reveal" style="margin-top:22px; transition-delay:380ms">
+            <div style="display:flex; gap:10px; margin-top:16px;">
+              <div class="pill">100% réactif</div>
+              <div class="pill" style="background:rgba(15,23,36,0.06); color:var(--ink)">Livraison 1–2 semaines</div>
+              <div class="pill">SLA & maintenance</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-visual reveal-right">
+          <div class="mockup">
+            <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/laptop-1954380_1280.png" alt="mockup site">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container">
+      <h3 class="section-title reveal">Nos services — solutions claires, résultats mesurables</h3>
+      <p class="section-sub reveal" style="transition-delay:80ms">
+        Nous accompagnons les entreprises, indépendants et organisations dans la création et l'amélioration de leur présence en ligne.
+        Chaque service est conçu pour produire un ROI réel : plus de visibilité, plus de contact et plus de confiance.
+      </p>
+
+      <div class="services-grid reveal" style="margin-top:22px; transition-delay:160ms">
+        <!-- Service 1 -->
+        <div class="service">
+          <h4>1 — Site vitrine professionnel</h4>
+          <p>
+            Présentez votre activité de façon claire, moderne et crédible. Idéal pour cabinets, PME et freelances qui veulent convertir leurs visiteurs en prospects qualifiés.
+          </p>
+          <ul>
+            <li>Pages clés : Accueil, Services, À propos, Contact</li>
+            <li>Design responsive — mobile first</li>
+            <li>Formulaire sécurisé & intégration e-mail</li>
+          </ul>
+
+          <div class="kpi">
+            <div class="item"><strong>Livraison</strong><div class="muted">1–2 semaines</div></div>
+            <div class="item"><strong>SEO de base</strong><div class="muted">Structure & balises</div></div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service">
+          <h4>2 — Développement sur mesure & intégrations</h4>
+          <p>
+            Besoin d'un formulaire avancé, d'une réservation en ligne, d'un catalogue ou d'une intégration API ? Nous développons des solutions robustes et maintenables.
+          </p>
+          <ul>
+            <li>CMS léger ou headless selon votre besoin</li>
+            <li>Connexion CRM / paiement / email marketing</li>
+            <li>Tests et environnements (staging, prod)</li>
+          </ul>
+
+          <div class="kpi">
+            <div class="item"><strong>Scalable</strong><div class="muted">Architecture maintenable</div></div>
+            <div class="item"><strong>Support</strong><div class="muted">SLA disponible</div></div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service">
+          <h4>3 — Optimisation SEO & performance</h4>
+          <p>
+            Nous proposons des services d'optimisation SEO et de performance pour améliorer la visibilité et l'efficacité de votre site.
+          </p>
+          <ul>
+            <li>Responsive Design </li>
+            <li>Contenu Pertinent et Engagé</li>
+            <li>Stratégie mots-clés et structure de contenu</li>
+          </ul>
+
+          <div class="kpi">
+            <div class="item"><strong>Audit</strong><div class="muted">Rapport complet + priorités</div></div>
+            <div class="item"><strong>Résultats</strong><div class="muted">Visibilité mesurable</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional persuasive block -->
+      <div class="reveal" style="margin-top:28px; transition-delay:240ms">
+        <div class="cta">
+          <div>
+            <strong>Pourquoi choisir notre agence ?</strong>
+            <div class="muted" style="margin-top:6px">
+              Transparence des coûts, processus clair. Nous privilégions la durabilité et la sécurité technique.
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center">
+            <a class="btn btn-primary" href="#contact">Obtenir un devis personnalisé</a>
+            <a class="btn btn-ghost" href="#contact">Appeler / WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div id="testimonials" style="margin-top:44px">
+        <h3 class="section-title reveal">Témoignages</h3>
+        <p class="section-sub reveal" style="transition-delay:80ms">Retours réels de clients satisfaits — crédibilité et impact.</p>
+
+        <div class="testimonials reveal" style="transition-delay:140ms">
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <div class="quote">« Orace a transformé notre site en véritable outil commercial. Plus de contacts qualifiés en 3 mois. »</div>
+            <div class="author">
+              <div class="avatar">JD</div>
+              <div>
+                <div style="font-weight:700">Yves BONOU</div>
+                <div class="muted">Directeur, Cabinet Conseil</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <div class="quote">« Livraison rapide, design moderne et support réactif. Recommandé pour les PME. »</div>
+            <div class="author">
+              <div class="avatar">ML</div>
+              <div>
+                <div style="font-weight:700">Anonymat</div>
+                <div class="muted">Gérante, Boutique locale</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi">
+            <div class="stars">★★★★★</div>
+            <div class="quote">« Audit SEO précis et actions concrètes — notre trafic a augmenté notablement. »</div>
+            <div class="author">
+              <div class="avatar">AS</div>
+              <div>
+                <div style="font-weight:700">Alexis S.</div>
+                <div class="muted">Startup Tech</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container reveal" style="padding-bottom:80px; transition-delay:260ms">
+      <h3 class="section-title">Contact & demande de devis</h3>
+      <p class="section-sub">Expliquez-nous brièvement votre projet et nous reviendrons avec une proposition claire et chiffrée.</p>
+
+      <div style="margin-top:18px; display:grid; grid-template-columns: 1fr 360px; gap:20px;">
+        <!-- form -->
+        <form id="contactForm" style="background:#fff; padding:18px; border-radius:12px; box-shadow:0 12px 40px rgba(12,17,23,0.04); border:1px solid rgba(15,23,36,0.03)">
+          <label style="display:block; margin-bottom:10px;">
+            <div style="font-weight:600; margin-bottom:6px">Nom complet</div>
+            <input required name="name" placeholder="Orace ATT" style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(15,23,36,0.06)" />
+          </label>
+
+          <label style="display:block; margin-bottom:10px;">
+            <div style="font-weight:600; margin-bottom:6px">Email</div>
+            <input required type="email" name="email" placeholder="contact@exemple.com" style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(15,23,36,0.06)" />
+          </label>
+
+          <label style="display:block; margin-bottom:10px;">
+            <div style="font-weight:600; margin-bottom:6px">Brief (2–4 lignes)</div>
+            <textarea required name="message" placeholder="Décrivez votre projet..." rows="6" style="width:100%; padding:12px; border-radius:8px; border:1px solid rgba(15,23,36,0.06)"></textarea>
+          </label>
+
+          <div style="display:flex; gap:12px; align-items:center; margin-top:8px">
+            <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+            <div class="muted">Ou écrivez-nous : <strong>oraceattinmawassonou@gmail.com</strong></div>
+          </div>
+        </form>
+
+        <!-- info -->
+        <aside style="background:linear-gradient(180deg,#fff,#fbfdff); padding:18px; border-radius:12px; box-shadow:0 12px 30px rgba(12,17,23,0.04); border:1px solid rgba(15,23,36,0.03)">
+          <h4 style="margin:0 0 8px 0">Infos & disponibilité</h4>
+          <div class="muted" style="margin-bottom:12px">Missions locales et internationales — tarification claire et planning respecté.</div>
+
+          <div style="display:grid; gap:10px">
+            <div><strong>Email :</strong> oraceattinmawassonou@gmail.com</div>
+            <div><strong>Téléphone :</strong> +229 01 43 78 78 97</div>
+            <div><strong>Localisation :</strong> Cotonou, Bénin</div>
+          </div>
+
+          <div style="margin-top:16px">
+            <a class="btn btn-ghost" href="#" onclick="alert('Téléchargement simulé'); return false">Télécharger brochure (PDF)</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Orace Attinmawassonou — Agence Digitale. Tous droits réservés.
+    </div>
+  </footer>
+
+  <!-- Scroll reveal & form handling JS -->
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // IntersectionObserver for reveals
+    (function(){
+      const options = { threshold: 0.12 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      // select elements to reveal (common helpers)
+      const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      reveals.forEach((el, i) => {
+        // stagger effect
+        el.style.transitionDelay = (i * 40) + 'ms';
+        observer.observe(el);
+      });
+    })();
+
+    // Simple form handling (simulate submit)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = this.name.value.trim() || 'Client';
+      // Simulated behavior: show confirmation, reset form
+      alert('Merci ' + name + ' — votre demande a bien été reçue. Nous vous contacterons sous 24h ouvrées.');
+      this.reset();
+    });
+  </script>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 150;
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
+  });
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<body>
+
+
+
+</body>
+</html>
