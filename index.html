@@ -3,355 +3,269 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Orace M. ATTINMAWASSONOU</title>
-
+  
+  <!-- Meta SEO -->
+  <title>Orace M. ATTINMAWASSONOU | Développeur web</title>
+  <meta name="description" content="Orace Attinmawassonou - Développeur web. Création de sites web professionnels, responsives et optimisés pour la conversion.">
+  <meta name="keywords" content="développement web, site vitrine, responsive design, optimisation SEO, Bénin">
+  <meta name="author" content="Orace Attinmawassonou">
+  <meta property="og:title" content="Orace M. ATTINMAWASSONOU - Développeur web">
+  <meta property="og:description" content="Votre site web, votre meilleur vendeur. Sites captivants et optimisés pour la conversion.">
+  <meta property="og:image" content="P1.jpg">
+  <meta property="og:url" content="https://votredomaine.com">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- CSS externe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
-    <div class="container nav">
+    <div class="container nav-container">
       <div class="brand">
         <h1>Orace Attinmawassonou</h1>
-        <p>Web Designer & Développeur | Sites Responsives & Optimisés</p>
+        <p>Développeur web | Sites Responsives & Optimisés</p>
       </div>
 
-      <nav class="desktop">
+      <!-- Navigation Desktop -->
+      <nav class="desktop-nav" aria-label="Navigation principale">
         <a href="#services">Services</a>
         <a href="#testimonials">Témoignages</a>
-        <a href="#contact">Contacts</a>
+        <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="#devis">Demander un devis</a>
       </nav>
+
+      <!-- Bouton Menu Mobile -->
+      <button class="nav-toggle" aria-label="Menu mobile" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
     </div>
+
+    <!-- Navigation Mobile -->
+    <nav class="mobile-nav" aria-label="Navigation mobile">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Témoignages</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="#devis">Demander un devis</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Texte hero -->
+        <div class="hero-text reveal">
+          <h2>Votre site web, votre meilleur vendeur – Attirez, Captivez, Convertissez</h2>
+          <p class="lead">
+            Chaque visiteur est une opportunité. Chaque page est une chance de convaincre.
+            Je crée des sites web au design captivant, ultra-rapides et optimisés pour convertir vos visiteurs en clients fidèles.
+            Avec moi, vous obtenez plus qu'un site : un véritable outil de croissance, pensé pour votre succès et votre visibilité en ligne.
+            Pourquoi attendre ? Donnez vie à votre projet dès aujourd'hui et voyez vos résultats exploser.
+          </p>
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="#devis">Demander un devis</a>
+            <a class="btn btn-ghost" href="#services">Découvrir mes services</a>
+          </div>
+        </div>
 
-      <!-- Texte hero -->
-      <div class="hero-text">
-        <h2>Votre site web, votre meilleur vendeur – Attirez, Captivez, Convertissez</h2>
-
-        <p class="lead">
-      Chaque visiteur est une opportunité. Chaque page est une chance de convaincre.
-Je crée des sites web au design captivant, ultra-rapides et optimisés pour convertir vos visiteurs en clients fidèles.
-Avec moi, vous obtenez plus qu’un site : un véritable outil de croissance, pensé pour votre succès et votre visibilité en ligne.
-Pourquoi attendre ? Donnez vie à votre projet dès aujourd’hui et voyez vos résultats exploser
-        </p>
-
-        <div class="row" style="margin-top:20px">
-          <a class="btn btn-primary" href="#devis">Demander un devis</a>
-          <a class="btn btn-ghost" href="#services">Découvrir mes services</a>
+        <!-- Image hero -->
+        <div class="card-visual reveal" style="transition-delay: 0.2s">
+          <div class="mockup">
+            <img src="P1.jpg" alt="Photo de Orace Attinmawassonou" loading="eager" width="500" height="500">
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Image hero -->
-      <div class="card-visual">
-        <div class="mockup">
-          <img src="P1.jpg" alt="Photo de Orace">
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section section-services" aria-labelledby="services-title">
+      <div class="container">
+        <h3 id="services-title" class="section-title reveal">Mes Services</h3>
+        <p class="section-sub reveal">Je propose des solutions web modernes, performantes et adaptées à vos besoins.</p>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service reveal">
+            <div class="service-media">
+              <img src="P2.jpg" alt="Site vitrine professionnel" loading="lazy" width="400" height="300">
+            </div>
+            <h4>Site vitrine professionnel</h4>
+            <p>Présentez votre activité de façon claire, moderne et crédible. Idéal pour les cabinets, PME et freelances.</p>
+            <ul>
+              <li>Pages clés : Accueil, Services, À propos, Contact</li>
+              <li>Design responsive et moderne</li>
+              <li>Formulaire sécurisé et optimisation UX</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service reveal" style="transition-delay: 0.1s">
+            <div class="service-media">
+              <img src="P3.jpg" alt="Développement web avancé" loading="lazy" width="400" height="300">
+            </div>
+            <h4>Développement web avancé</h4>
+            <p>Besoin d'un formulaire avancé, d'une réservation en ligne ou d'un catalogue? Je développe des solutions robustes.</p>
+            <ul>
+              <li>CMS léger ou headless selon vos besoins</li>
+              <li>Connexion CRM, paiement, email marketing</li>
+              <li>Tests et environnements de production</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service reveal" style="transition-delay: 0.2s">
+            <div class="service-media">
+              <img src="P4.jpg" alt="Maintenance de site web" loading="lazy" width="400" height="300">
+            </div>
+            <h4>Maintenance de site web</h4>
+            <p>Je propose des services de maintenance pour améliorer la visibilité et l'efficacité de votre site.</p>
+            <ul>
+              <li>Mises à jour régulières et corrections</li>
+              <li>Optimisation des performances</li>
+              <li>Sécurité renforcée et assistance</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="section section-testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h3 id="testimonials-title" class="section-title reveal">Témoignages</h3>
+        <p class="section-sub reveal">Retours réels de clients satisfaits — crédibilité et impact.</p>
 
- <section id="services" class="section section-services container">
-  <h3 class="section-title">Mes Services</h3>
-  <p class="section-sub">Je propose des solutions web modernes, performantes et adaptées à vos besoins.</p>
-
-  <div class="services-grid">
-    <!-- Service 1 -->
-    <div class="service">
-      <div class="service-media">
-        <img src="P2.jpg" alt="Site vitrine">
-      </div>
-      <h4>Site vitrine professionnel</h4>
-      <p>Présentez votre activité de façon claire, moderne et crédible. Idéal pour les cabinets, PME et freelances qui veulent convertir leurs visiteurs en prospects qualifiés.</p>
-      <ul>
-        <li>Pages clés : Accueil, Services, À propos, Contact</li>
-        <li>Design responsive-mobile et  moderne</li>
-        <li>Formulaire sécurisé et intégration e-mail & Expérience utilisateur optimisée</li>
-      </ul>
-    </div>
-
-    <!-- Service 2 -->
-    <div class="service">
-      <div class="service-media">
-        <img src="P3.jpg" alt="Développement web avancé">
-      </div>
-      <h4>Développement web avancé</h4>
-      <p>Besoin d'un formulaire avancé, d'une réservation en ligne ou d'un catalogue? Je développe des solutions robustes et maintenables.</p>
-      <ul>
-        <li>CMS léger ou headless selon vos besoins</li>
-        <li>Connexion CRM, paiement, email marketing</li>
-        <li>Tests et environnements de production</li>
-      </ul>
-    </div>
-
-    <!-- Service 3 -->
-    <div class="service">
-      <div class="service-media">
-        <img src="P4.jpg" alt="Maintenance de site web">
-      </div>
-      <h4>Maintenance de site web</h4>
-      <p>Je propose des services de maintenance pour améliorer la visibilité et l'éfficacité de votre site. Je m'occupe de votre site pendant que vous vous concentrez sur votre activité.</p>
-      <ul>
-        <li>Mises à jour régulière et correction de bugs</li>
-        <li>Optimisation des performances et responsive design</li>
-        <li>Sécurité renforcée et assistance technique</li>
-      </ul>
-    </div>
-  </div>
-</section>
-   <!-- Testimonials -->
-      <div id="testimonials" style="margin-top:44px">
-        <h3 class="section-title reveal">Témoignages</h3>
-        <p class="section-sub reveal" style="transition-delay:80ms">Retours réels de clients satisfaits — crédibilité et impact.</p>
-
-        <div class="testimonials reveal" style="transition-delay:140ms">
-          <div class="testi">
+        <div class="testimonials">
+          <div class="testi reveal">
             <div class="stars">★★★★★</div>
-            <div class="quote">« Orace a transformé notre site en véritable outil commercial. Plus de contacts qualifiés en 3 mois. »</div>
+            <p class="quote">« Orace a transformé notre site en véritable outil commercial. Plus de contacts qualifiés en 3 mois. »</p>
             <div class="author">
               <div class="avatar">YB</div>
               <div>
-                <div style="font-weight:700">Yves B.</div>
-                <div class="muted">Directeur, Cabinet Conseil</div>
+                <div class="author-name">Yves B.</div>
+                <div class="author-title">Directeur, Cabinet Conseil</div>
               </div>
             </div>
           </div>
 
-          <div class="testi">
+          <div class="testi reveal" style="transition-delay: 0.1s">
             <div class="stars">★★★★★</div>
-            <div class="quote">« Livraison rapide, design moderne et support réactif. Recommandé pour les PME. »</div>
+            <p class="quote">« Livraison rapide, design moderne et support réactif. Recommandé pour les PME. »</p>
             <div class="author">
               <div class="avatar">A</div>
               <div>
-                <div style="font-weight:700">Anonymat</div>
-				  <div class="muted">Gérante, Boutique locale</div>
+                <div class="author-name">Anonyme</div>
+                <div class="author-title">Gérante, Boutique locale</div>
               </div>
             </div>
           </div>
 
-          <div class="testi">
+          <div class="testi reveal" style="transition-delay: 0.2s">
             <div class="stars">★★★★★</div>
-            <div class="quote">« Grâce au site développé par Orace, notre taux de conversion a doublé en seulement deux mois. Le design est moderne, la navigation intuitive et le support est réactif à chaque demande.»</div>
+            <p class="quote">« Grâce au site développé par Orace, notre taux de conversion a doublé en seulement deux mois. »</p>
             <div class="author">
               <div class="avatar">AS</div>
               <div>
-                <div style="font-weight:700">Alexis S.</div>
-                <div class="muted">Fondateur, e-commerce</div>
+                <div class="author-name">Alexis S.</div>
+                <div class="author-title">Fondateur, e-commerce</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
 
-  <!-- DEVIS -->
-  <section id="devis" class="container reveal">
-    <h3>Demander un devis</h3>
+    <!-- DEVIS SECTION -->
+    <section id="devis" class="section section-devis" aria-labelledby="devis-title">
+      <div class="container">
+        <h3 id="devis-title" class="section-title reveal">Demander un devis</h3>
+        <p class="section-sub reveal">Décrivez votre projet et je vous réponds sous 24h.</p>
 
-    <form action="https://getform.io/f/aolzvneb" method="POST">
+        <form class="devis-form reveal" action="https://getform.io/f/aolzvneb" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis">
+          <input type="hidden" name="_captcha" value="false">
 
-      <input type="hidden" name="_subject" value="Nouvelle demande de devis">
-      <input type="hidden" name="_captcha" value="false">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom et prénom">
+          </div>
 
-      <label>Nom complet
-        <input type="text" name="name" required>
-      </label>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+          </div>
 
-      <label>Email
-        <input type="email" name="email" required>
-      </label>
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+229 XX XX XX XX">
+          </div>
 
-      <label>Projet
-        <textarea name="message" rows="5" required></textarea>
-      </label>
+          <div class="form-group">
+            <label for="project">Décrivez votre projet *</label>
+            <textarea id="project" name="project" rows="5" required placeholder="Décrivez votre projet, vos objectifs, votre budget approximatif..."></textarea>
+          </div>
 
-      <button class="btn btn-primary">Envoyer la demande</button>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+        </form>
+      </div>
+    </section>
 
-    </form>
-  </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h3 id="contact-title" class="section-title reveal">Contactez-moi</h3>
+        <p class="section-sub reveal">Cliquez sur un bouton pour me contacter :</p>
 
-  <!-- CONTACT (HTML + CSS) -->
-<style>
-  /* --- Layout container (adapt to your .container) --- */
-  #contact.container {
-    padding: 60px 20px;
-  }
-  #contact .section-title { text-align:center; margin-bottom:8px; color:var(--white); }
-  #contact .section-sub   { text-align:center; margin-bottom:28px; color:var(--muted); }
+        <div class="contact-buttons" role="group" aria-label="Moyens de contact">
+          <!-- WhatsApp -->
+          <a class="contact-item bg-whatsapp" href="https://wa.me/2290155172503" target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp (+229 0155 172 503)">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+          </a>
 
-  /* --- Buttons wrapper --- */
-  .contact-buttons {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:56px;               /* spacing between items on desktop */
-    flex-wrap:wrap;
-    margin-top:12px;
-  }
+          <!-- LinkedIn -->
+          <a class="contact-item bg-linkedin" href="https://www.linkedin.com/in/orace-attinmawassonou-08841233b" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Orace Attinmawassonou">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M100.28 448H7.4V148.9h92.88V448zM53.79 108.1C24.09 108.1 0 83.8 0 54.2 0 24.1 24.62 0 54.62 0s53.79 24.1 53.79 54.2c0 29.6-24.09 53.9-54.62 53.9zM447.9 448h-92.68V302.4c0-34.7-12.43-58.4-43.54-58.4-23.78 0-37.93 16-44.18 31.4-2.28 5.5-2.85 13.2-2.85 20.9V448h-92.68s1.24-260.4 0-287.1h92.68v40.7c12.31-19 34.3-46.2 83.39-46.2 60.92 0 106.6 39.8 106.6 125.4V448z"/>
+            </svg>
+          </a>
 
-  /* --- Each contact item (colored rectangle) --- */
-  .contact-item {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:34px 40px;      /* space around the logo so it breathes */
-    border-radius:18px;     /* rounded rectangle — change if needed */
-    transition: transform .18s cubic-bezier(.2,.9,.3,1), box-shadow .18s;
-    text-decoration:none;
-    -webkit-tap-highlight-color: transparent;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  }
+          <!-- Facebook -->
+          <a class="contact-item bg-facebook" href="https://www.facebook.com/profile.php?id=61574539902633" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook d'Orace Attinmawassonou">
+            <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M279.14 288l14.22-92.66h-88.91V127.7c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.11 44.38-121.11 124.72v70.62H22.89V288h81.36v224h100.17V288z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  /* --- Sizes: very large on desktop --- */
-  .contact-item svg {
-    width: 160px;           /* logo visible & large on desktop */
-    height: 160px;
-    display:block;
-    flex-shrink:0;
-    preserveAspectRatio: xMidYMid meet;
-  }
-
-  /* Ensure SVG shapes are white and clearly visible */
-  .contact-item svg path,
-  .contact-item svg rect,
-  .contact-item svg circle,
-  .contact-item svg g {
-    fill: #ffffff !important;
-    stroke: none !important;
-  }
-
-  /* Background colors */
-  .bg-whatsapp  { background: #25D366; }  /* WhatsApp green */
-  .bg-linkedin  { background: #0A66C2; }  /* LinkedIn blue (official) */
-  .bg-facebook  { background: #1877F2; }  /* Facebook blue (official) */
-
-  /* Hover / focus */
-  .contact-item:hover,
-  .contact-item:focus {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 28px 60px rgba(0,0,0,0.20);
-    outline: none;
-  }
-  .contact-item:focus-visible {
-    outline: 4px solid rgba(255,255,255,0.18);
-    outline-offset: 4px;
-  }
-
-  /* Smaller on tablet */
-  @media (max-width: 980px) {
-    .contact-item svg { width: 120px; height: 120px; }
-    .contact-item { padding: 26px 30px; gap: 18px; }
-    .contact-buttons { gap: 36px; }
-  }
-
-  /* Mobile: reasonable size */
-  @media (max-width: 720px) {
-    .contact-item svg { width: 78px; height: 78px; }
-    .contact-item { padding: 14px 18px; border-radius:12px; }
-    .contact-buttons { gap: 18px; }
-  }
-  .bg-whatsapp {
-  background: #25D366;
-}
-
-.bg-whatsapp svg {
-  width: 160px;
-  height: 160px;
-}
-
-.bg-whatsapp svg path {
-  stroke: #fff;
-  fill: none;
-}
-.whatsapp-logo {
-  width: 160px;
-  height: 160px;
-  display: block;
-}
-/* Mobile: réduire aussi l’image WhatsApp */
-@media (max-width: 720px) {
-
-  .contact-item svg,
-  .whatsapp-logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contact-item {
-    padding: 14px 18px;
-    border-radius:12px;
-  }
-
-  .contact-buttons {
-    gap: 18px;
-  }
-}
-
-</style>
-
-<section id="contact" class="container" aria-labelledby="contact-title">
-  <h3 id="contact-title" class="section-title">Contactez-moi</h3>
-  <p class="section-sub">Cliquez sur un bouton pour me contacter :</p>
-
-  <div class="contact-buttons" role="group" aria-label="Moyens de contact">
-    <!-- WhatsApp (green background, logo white inside) -->
-    <a
-  class="contact-item bg-whatsapp"
-  href="https://wa.me/2290155172503"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Contacter sur WhatsApp (+229 0155 172 503)"
->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-       alt="WhatsApp"
-       class="whatsapp-logo">
-</a>
-
-
-    <!-- LinkedIn (blue background, logo white) -->
-    <a
-      class="contact-item bg-linkedin"
-      href="https://www.linkedin.com/in/orace-attinmawassonou-08841233b"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil LinkedIn d'Orace Attinmawassonou">
-      <!-- LinkedIn SVG (white fill via CSS) -->
-      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <path d="M100.28 448H7.4V148.9h92.88V448zM53.79 108.1C24.09 108.1 0 83.8 0 54.2 0 24.1 24.62 0 54.62 0s53.79 24.1 53.79 54.2c0 29.6-24.09 53.9-54.62 53.9zM447.9 448h-92.68V302.4c0-34.7-12.43-58.4-43.54-58.4-23.78 0-37.93 16-44.18 31.4-2.28 5.5-2.85 13.2-2.85 20.9V448h-92.68s1.24-260.4 0-287.1h92.68v40.7c12.31-19 34.3-46.2 83.39-46.2 60.92 0 106.6 39.8 106.6 125.4V448z"/>
-      </svg>
-    </a>
-
-    <!-- Facebook (blue background, logo white) -->
-    <a
-      class="contact-item bg-facebook"
-      href="https://www.facebook.com/profile.php?id=61574539902633"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil Facebook d'Orace Attinmawassonou">
-      <!-- Facebook SVG (white fill via CSS) -->
-      <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <path d="M279.14 288l14.22-92.66h-88.91V127.7c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121.11 44.38-121.11 124.72v70.62H22.89V288h81.36v224h100.17V288z"/>
-      </svg>
-    </a>
-  </div>
-</section>
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      © <span id="year"></span> Orace Attinmawassonou — Tous droits réservés.
+      <p>&copy; <span id="year"></span> Orace Attinmawassonou — Tous droits réservés.</p>
+      <p class="footer-links">
+        <a href="#services">Services</a> • 
+        <a href="#testimonials">Témoignages</a> • 
+        <a href="#contact">Contact</a> • 
+        <a href="#devis">Devis</a>
+      </p>
     </div>
   </footer>
 
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
